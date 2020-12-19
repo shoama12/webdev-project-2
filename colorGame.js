@@ -1,6 +1,6 @@
 let w, diff;
 
-// choose rendome RGB color function 
+// choose random RGB color
 function getRandomRGB() {
     var r = Math.round(0xff * Math.random());
     var g = Math.round(0xff * Math.random());
@@ -8,7 +8,7 @@ function getRandomRGB() {
     return `rgb(${r},${g},${b})`;
 }
 
-// boxes building function 
+// generate boxes according to the difficulty level 
 function generateBoxes() {
     document.getElementById("result").hidden = true;
     document.getElementById("game").hidden = false;
@@ -35,7 +35,7 @@ function generateBoxes() {
     countdown();
 }
 
-// function that counts the time you have to choose the right color
+// count the time left to choose the right color
 function countdown() {
     clearInterval(timer);
     var t = document.getElementById("timer");
@@ -52,7 +52,7 @@ function countdown() {
     }, 100);
 }
 
-// function that checks your answear and give you feedback
+// check the answear and provide feedback
 function check(guess) {
     clearInterval(timer);
     r = document.getElementById("result");
@@ -71,7 +71,7 @@ function check(guess) {
     g.hidden = true;
 }
 
-// difficulty function with easy and hard option
+// set defficulty level
 function setDifficulty(l) {
     if (diff != l) {
         diff = l;
