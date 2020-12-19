@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Color Game</title>
+    <link rel="stylesheet" type="text/css" href="colorGame.css" />
+    <script type="text/javascript" src="colorGame.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <h1>The great<b>er</b> color game!</h1>
+
+        <div>
+            <p id="result" hidden></p>
+        </div>
+        <div id="game">
+            <h2>The correct color code is <b id="solution"></b></h2>
+            <p id="timer">00.00</p>
+            <div id="gameBoxes"></div>
+        </div>
+        <div id="diff">
+            <button onclick="setDifficulty(3);">Easy</button>
+            <button onclick="setDifficulty(5);" disabled>Hard</button>
+        </div>
+        <button onclick="generateBoxes();">Start Over</button>
+    </div>
+</body>
+
+</html>
