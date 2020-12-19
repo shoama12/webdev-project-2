@@ -36,7 +36,7 @@ function generateBoxes() {
 function countdown() {
     clearInterval(timer);
     var t = document.getElementById("timer");
-    t.innerText = 3;
+    t.innerText = 30;
 
     timer = setInterval(() => {
         if (t.innerText <= 0) {
